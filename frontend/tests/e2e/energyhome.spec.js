@@ -54,6 +54,6 @@ test('visualización del dashboard', async ({ page }) => {
 
   await expect(page.getByText('Consumo total')).toBeVisible();
   await expect(page.getByText('Consumo por electrodoméstico')).toBeVisible();
-  await expect(page.getByText('Consumo mensual')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Consumo mensual' })).toBeVisible();
   await expect(page.getByText('Historial de consumo')).toBeVisible();
 });
