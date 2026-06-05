@@ -14,7 +14,7 @@ const swaggerDocument = {
       description:
         process.env.NODE_ENV === 'production'
           ? 'Production'
-          : 'Local',
+          : 'Local', // Se actualiza el enlace
     },
   ],
   tags: [
