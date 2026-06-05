@@ -5,7 +5,18 @@ const swaggerDocument = {
     version: '1.0.0',
     description: 'API REST para gestión y visualización de consumo energético en el hogar.',
   },
-  servers: [{ url: 'http://localhost:4000', description: 'Local' }],
+  servers: [
+    {
+      url:
+        process.env.NODE_ENV === 'production'
+          ? 'https://energyhome-backend-production.up.railway.app'
+          : 'http://localhost:4000',
+      description:
+        process.env.NODE_ENV === 'production'
+          ? 'Production'
+          : 'Local', // Se actualiza el enlace
+    },
+  ],
   tags: [
     { name: 'Auth' },
     { name: 'Users' },
